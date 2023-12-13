@@ -4,7 +4,7 @@
  *@argc: argument counter
  *@argv: argumet vector which is monty file
  *
- * Return: null 
+ * Return: null
  */
 int main(int argc, char *argv[])
 {
@@ -16,5 +16,5 @@ int main(int argc, char *argv[])
 
 	r_monty_and_exe_ins(argv[1]);
 
-	return 0;
+	return (0);
 }
