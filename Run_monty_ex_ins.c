@@ -23,6 +23,17 @@ void r_monty_and_exe_ins(char *f_name)
 		{
 			r_line[strlen(r_line) - 1] = '\0';
 		}
+		char *whitespace_line = line;
+		while (*whitespace_line == ' ' || *whitespace_line == '\t')
+		{
+			whitespace_line++;
+		}
+		size_t len = strlen(whitespace_line);
+		while (len > 0 && (whitespace_line[len - 1] == ' ' || whitespace_line[len - 1] == '\t'))
+		{
+			whitespace_line[--len] = '\0';
+		}
+
 
 		char *token =  strtok(r_line, " ");
 		char *opcode = token;

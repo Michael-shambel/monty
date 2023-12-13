@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 
-	open_monty_and_instruct(argv[1]);
+	r_monty_and_exe_ins(argv[1]);
 
 	return 0;
 }

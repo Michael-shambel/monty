@@ -2,6 +2,9 @@
 #define _MONTY_H_
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+
+extern stack_t *stack;
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -30,7 +33,8 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
-
+int main(int argc, char *argv[]);
+void r_monty_and_exe_ins(char *f_name);
 
 
 
