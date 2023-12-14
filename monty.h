@@ -1,10 +1,16 @@
 #ifndef _MONTY_H_
 #define _MONTY_H_
+<<<<<<< HEAD
+
+#include <stdio.h>
+#include <stdlib.h>
+=======
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <ctype.h>
 
+>>>>>>> 79a674667c112cd31b6031e9489b2f8acceb03e1
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
