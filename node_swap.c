@@ -1,8 +1,10 @@
 #include "monty.h"
 
 /**
- *
- *
+ * n_swap - Seaps two elements in a stack
+ * @line_number: line of the element
+ *@stack: pointer to the stack
+ * Return: voud
  */
 
 void n_swap(stack_t **stack, unsigned int line_number)
