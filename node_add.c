@@ -1,10 +1,10 @@
 #include "monty.h"
 
 /**
- *
- *
- *
- *
+ * n_add - Function that adds element to the stack
+ * @stack: pointer to the stack
+ * @line_number: line number
+ * Return: void
  */
 void n_add(stack_t **stack, unsigned int line_number)
 {
