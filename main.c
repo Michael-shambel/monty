@@ -12,7 +12,9 @@ instruction_t instructions[] = {
 	{"pall", &n_pall},
 	{"pint", &n_pint},
 	{"pop", &n_pop},
+	{"swap", &n_swap},
 	{NULL, NULL}
+	
 };
 
 int main(int argc, char *argv[])
