@@ -39,6 +39,6 @@ extern instruction_t instructions[];
 void n_push(stack_t **stack, unsigned int line_track);
 void n_pall(stack_t **stack, unsigned int line_track);
 void n_pint(stack_t **stack, unsigned int line_number);
-
+void n_pop(stack_t **stack, unsigned int line_number);
 
 #endif
