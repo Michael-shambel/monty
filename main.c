@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  *main - the entry of the project
  *@argc: argument counter
@@ -6,6 +7,13 @@
  *
  * Return: null
  */
+instruction_t instructions[] = {
+	{"push", &n_push},
+	{"pall", &n_pall},
+	{"pint", &n_pint},
+	{"pop", &n_pop},
+	{NULL, NULL}
+};
 
 int main(int argc, char *argv[])
 {
