@@ -38,6 +38,9 @@ typedef struct instruction_s
 } instruction_t;
 extern instruction_t instructions[];
 
+void n_add(stack_t **stack, unsigned int line_number);
+void n_nop(stack_t **stack, unsigned int line_number);
+
 void n_push(stack_t **stack, unsigned int line_track);
 void n_pall(stack_t **stack, unsigned int line_track);
 void n_pint(stack_t **stack, unsigned int line_number);
