@@ -1,8 +1,10 @@
 #include "monty.h"
 /**
+ *n_pall - print the node value
+ *@stack: node
+ *@line_number: the input line track
  *
- *
- *
+ * Return: nothing
  *
  */
 

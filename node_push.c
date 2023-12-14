@@ -1,16 +1,17 @@
 #include "monty.h"
 /**
+ *n_push - push the input number
+ *@stack: linked node
+ *@line_number: argumetn line
  *
- *
- *
- *
+ * Return: nothing
  */
 void n_push(stack_t **stack, unsigned int line_number)
 {
 	int x = 0;
 	char *opcode = strtok(NULL, " \n\t");
-	 int result = atoi(opcode);
-        stack_t *new_node = malloc(sizeof(stack_t));
+	int result = atoi(opcode);
+	stack_t *new_node = malloc(sizeof(stack_t));
 
 	if (opcode == NULL)
 	{
@@ -26,7 +27,7 @@ void n_push(stack_t **stack, unsigned int line_number)
 		}
 		x++;
 	}
-	
+
 	if (new_node == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
@@ -36,7 +37,7 @@ void n_push(stack_t **stack, unsigned int line_number)
 	new_node->n = result;
 	new_node->prev = NULL;
 
-	if(*stack == NULL)
+	if (*stack == NULL)
 	{
 		new_node->next = NULL;
 	}
