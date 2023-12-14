@@ -1,4 +1,4 @@
-#ifndef _MONTY_H_
+#ifdef _MONTY_H_
 #define _MONTY_H_
 <<<<<<< HEAD
 
