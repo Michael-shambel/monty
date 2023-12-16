@@ -7,64 +7,26 @@
  *
  * Return: null
  */
-instruction_t instructions[] = {
-	{"push", &n_push},
-	{"pall", &n_pall},
-	{"pint", &n_pint},
-	{"pop", &n_pop},
-	{"swap", &n_swap},
-	{"add", &n_add},
-	{"nop",&n_nop},
-	{NULL, NULL}
-	
-};
-
 int main(int argc, char *argv[])
 {
-	char temp[300];
-	unsigned int line_number = 1;
-	stack_t *stack = NULL;
-	FILE *file;
-	int x = 0;
-
+	instruction_t instructions[] = {
+		{"push", &n_push},
+		{"pall", &n_pall},
+		{"pint", &n_pint},
+		{"pop", &n_pop},
+		{"swap", &n_swap},
+		{"add", &n_add},
+		{"nop", &n_nop},
+		{NULL, NULL}
+	};
 	if (argc != 2)
 	{
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	file = fopen(argv[1], "r");
-	if (file == NULL)
+	if (exec_monty(argv[1], instructions) != EXIT_SUCCESS)
 	{
-		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		return (EXIT_FAILURE);
 	}
-
-	while (fgets(temp, sizeof(temp), file) != NULL)
-	{
-		char *opcode = strtok(temp, " \n\t");
-
-		if (opcode == NULL || opcode[0] == '#')
-		{
-			line_number++;
-			continue;
-		}
-
-		for (x = 0; instructions[x].opcode != NULL; x++)
-		{
-			if (strcmp(opcode, instructions[x].opcode) == 0)
-			{
-				instructions[x].f(&stack, line_number);
-				break;
-			}
-		}
-		if (instructions[x].opcode == NULL)
-		{
-			fprintf(stderr, "L%u: unknown instruction %s\n", line_number, opcode);
-			fclose(file);
-			return (EXIT_FAILURE);
-		}
-		line_number++;
-	}
-	fclose(file);
 	return (0);
 }

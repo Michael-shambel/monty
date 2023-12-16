@@ -37,7 +37,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 extern instruction_t instructions[];
-
+int  exec_monty(const char *filename, instruction_t instructions[]);
 void n_add(stack_t **stack, unsigned int line_number);
 void n_nop(stack_t **stack, unsigned int line_number);
 

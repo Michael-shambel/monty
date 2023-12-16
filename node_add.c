@@ -1,10 +1,11 @@
 #include "monty.h"
 
 /**
+ *n_add - this is node help to add
+ *@stack: Double pointer to the top of the stack.
+ *@line_number: Line number in the Monty file
  *
- *
- *
- *
+ * Return: nothing
  */
 void n_add(stack_t **stack, unsigned int line_number)
 {
@@ -17,7 +18,7 @@ void n_add(stack_t **stack, unsigned int line_number)
 	}
 
 	(*stack)->next->n += (*stack)->n;
-	        *stack = (*stack)->next;
-		free(temp);
-		(*stack)->prev = NULL;
+	*stack = (*stack)->next;
+	free(temp);
+	(*stack)->prev = NULL;
 }
